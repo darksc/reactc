@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import App from './App';
 
 ReactDOM.render(
-    <App name="苏晨" />,
+    <App name="react" />,
     document.getElementById('root')
 );
-
