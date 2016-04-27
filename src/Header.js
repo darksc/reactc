@@ -9,13 +9,13 @@ export default class Header extends Component {
         return (
             <header>
                 <div>
-                    <h1><Link to={'/'}>reactc</Link></h1>
+                    <h1><Link to={'/'}>REACTC</Link></h1>
                     <p>first react project</p>
                 </div>
                 <ul>
-                    <li className={Header.selected(this.props.name[0].name, '首页')}><Link to={'/'}>首页</Link></li>
-                    <li className={Header.selected(this.props.name[0].name, '登录')}><Link to={'/login'}>登录</Link></li>
-                    <li className={Header.selected(this.props.name[0].name, '注册')}><Link to={'/register'}>注册</Link></li>
+                    <li className={Header.selected(this.props.name[0].name, 'Index')}><Link to={'/'}>Index</Link></li>
+                    <li className={Header.selected(this.props.name[0].name, 'Login')}><Link to={'/login'}>Login</Link></li>
+                    <li className={Header.selected(this.props.name[0].name, 'Register')}><Link to={'/register'}>Register</Link></li>
                 </ul>
             </header>
         );

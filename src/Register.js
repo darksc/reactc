@@ -36,7 +36,7 @@ export default class Register extends Component {
                             <input type="password" placeholder="Confirm Password"/>
                         </div>
                         <div>
-                            <button>登录</button>
+                            <button>Register</button>
                         </div>
                     </div>
                 </div>

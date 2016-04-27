@@ -15,7 +15,8 @@ export default class Login extends Component {
         this.state = {
             username: '',
             password: '',
-            msg: ''
+            msg: '',
+            msgClass: ''
         };
     }
 
@@ -31,11 +32,11 @@ export default class Login extends Component {
                         <div>
                             <input type="password" value={this.state.password} onChange={this.passwordChange.bind(this)} placeholder="Password"/>
                         </div>
-                        <div className="msg-error">
+                        <div className={this.state.msgClass}>
                             {this.state.msg}
                         </div>
                         <div>
-                            <button onClick={this.handleClick.bind(this)}>登录</button>
+                            <button onClick={this.handleClick.bind(this)}>Login</button>
                         </div>
                     </div>
                 </div>
@@ -53,16 +54,19 @@ export default class Login extends Component {
     handleClick(e) {
         var self = this;
         if(this.state.username == 'admin@163.com') {
-            if(this.state.password == '123456') {
-                this.setState({msg: '登陆中...'});
+            if(this.state.password == 'admin') {
+                this.setState({msg: 'Loging...'});
+                this.setState({msgClass: 'msg-success'});
                 setTimeout(function() {
                     self.setState({msg: ''});
                 }, 2000);
             } else {
-                this.setState({msg: '用户名或密码错误!'});
+                this.setState({msg: 'The username or password error!'});
+                this.setState({msgClass: 'msg-error'});
             }
         } else {
-            this.setState({msg: '用户名或密码错误!'});
+            this.setState({msg: 'The username or password error!'});
+            this.setState({msgClass: 'msg-error'});
         }
     }
 

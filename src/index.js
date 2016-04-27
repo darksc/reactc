@@ -12,8 +12,8 @@ require('../sass/index.scss');
 
 render((
     <Router history={hashHistory}>
-        <Route path="/" name="首页" component={App}/>
-        <Route path="login" name="登录" component={Login}/>
-        <Route path="register" name="注册" component={Register}/>
+        <Route path="/" name="Index" component={App}/>
+        <Route path="login" name="Login" component={Login}/>
+        <Route path="register" name="Register" component={Register}/>
     </Router>
 ), document.getElementById('container'));
