@@ -37,6 +37,7 @@ export default class Login extends Component {
                     <div>
                         <button onClick={this.handleClick.bind(this)}>Login</button>
                     </div>
+                    <p>test uaername: admin, password: admin</p>
                 </div>
             </div>
         );

@@ -111,6 +111,9 @@ header {
             cursor: pointer;
         }
     }
+    p {
+        font-size: 0.6em;
+    }
 }
 
 .error {
@@ -127,4 +130,8 @@ header {
 
 .msg-success {
     color: #17be00;
+}
+.msg {
+    font-size: .1em;
+    color: rgba(191,87,73,1);
 }
