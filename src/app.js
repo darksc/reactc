@@ -4,10 +4,10 @@ import React from 'react';
 import { render } from 'react-dom';
 import { Router, Route, Link, hashHistory } from 'react-router';
 
-import Header from './Header';
-import Index from './Index';
-import Login from './Login';
-import Register from './Register';
+import Header from './components/Header';
+import Index from './components/Index';
+import Login from './components/Login';
+import Register from './components/Register';
 
 require('../sass/index.scss');
 

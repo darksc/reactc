@@ -8,8 +8,6 @@ export default class Index extends Component {
 
     constructor(props, context) {
         super(props, context);
-
-
     }
 
     render() {
