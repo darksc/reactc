@@ -22,7 +22,6 @@ export default class Login extends Component {
     render() {
         return (
             <div onKeyDown={this.handleKeyDown.bind(this)}>
-                <Header name={this.props.routes}/>
                 <div className="content">
                     <div className="login">
                         <div>
@@ -39,7 +38,6 @@ export default class Login extends Component {
                         </div>
                     </div>
                 </div>
-
             </div>
         );
     }

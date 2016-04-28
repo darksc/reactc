@@ -2,8 +2,6 @@
 
 import React, { Component } from 'react';
 
-import Header from './Header';
-
 export default class Register extends Component {
 
     constructor(props, context) {
@@ -20,7 +18,6 @@ export default class Register extends Component {
 
         return (
             <div>
-                <Header name={this.props.routes}/>
                 <div className="content">
                     <div className="register">
                         <div>
