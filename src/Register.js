@@ -17,24 +17,22 @@ export default class Register extends Component {
     render() {
 
         return (
-            <div>
-                <div className="content">
-                    <div className="register">
-                        <div>
-                            <input type="text" placeholder="Username" className={!this.state.usernameVerify ? 'error' : ''} onChange={this.usernameChange.bind(this)}/>
-                        </div>
-                        <div>
-                            <input type="email" placeholder="Email" className={!this.state.emailVerify ? 'error' : ''} onChange={this.emailChange.bind(this)}/>
-                        </div>
-                        <div>
-                            <input type="password" placeholder="Password"/>
-                        </div>
-                        <div>
-                            <input type="password" placeholder="Confirm Password"/>
-                        </div>
-                        <div>
-                            <button>Register</button>
-                        </div>
+            <div className="content">
+                <div className="register">
+                    <div>
+                        <input type="text" placeholder="Username" className={!this.state.usernameVerify ? 'error' : ''} onChange={this.usernameChange.bind(this)}/>
+                    </div>
+                    <div>
+                        <input type="email" placeholder="Email" className={!this.state.emailVerify ? 'error' : ''} onChange={this.emailChange.bind(this)}/>
+                    </div>
+                    <div>
+                        <input type="password" placeholder="Password"/>
+                    </div>
+                    <div>
+                        <input type="password" placeholder="Confirm Password"/>
+                    </div>
+                    <div>
+                        <button>Register</button>
                     </div>
                 </div>
             </div>

@@ -2,11 +2,13 @@
 
 import React, { Component } from 'react';
 
-import Header from './Header';
-
 import { Router } from 'react-router';
 
 export default class Login extends Component {
+
+    static contextTypes = {
+        router: React.PropTypes.object.isRequired
+    };
 
     constructor(props, context) {
         super(props, context);
@@ -21,21 +23,19 @@ export default class Login extends Component {
 
     render() {
         return (
-            <div onKeyDown={this.handleKeyDown.bind(this)}>
-                <div className="content">
-                    <div className="login">
-                        <div>
-                            <input type="text" value={this.state.username} onChange={this.usernameChange.bind(this)} placeholder="Email or Username"/>
-                        </div>
-                        <div>
-                            <input type="password" value={this.state.password} onChange={this.passwordChange.bind(this)} placeholder="Password"/>
-                        </div>
-                        <div className={this.state.msgClass}>
-                            {this.state.msg}
-                        </div>
-                        <div>
-                            <button onClick={this.handleClick.bind(this)}>Login</button>
-                        </div>
+            <div className="content" onKeyDown={this.handleKeyDown.bind(this)}>
+                <div className="login">
+                    <div>
+                        <input type="text" value={this.state.username} onChange={this.usernameChange.bind(this)} placeholder="Email or Username"/>
+                    </div>
+                    <div>
+                        <input type="password" value={this.state.password} onChange={this.passwordChange.bind(this)} placeholder="Password"/>
+                    </div>
+                    <div className={this.state.msgClass}>
+                        {this.state.msg}
+                    </div>
+                    <div>
+                        <button onClick={this.handleClick.bind(this)}>Login</button>
                     </div>
                 </div>
             </div>
@@ -56,7 +56,7 @@ export default class Login extends Component {
                 setTimeout(() => {
                     sessionStorage.setItem('login','true');
                     this.setState({msg: ''});
-                    this.props.router.replaceState(null, '/');
+                    this.context.router.replace('/');
                 }, 2000);
             } else {
                 this.setState({msg: 'The username or password error!'});
