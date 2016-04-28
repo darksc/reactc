@@ -9,7 +9,6 @@ import { Router } from 'react-router';
 export default class Login extends Component {
 
     constructor(props, context) {
-
         super(props, context);
 
         this.state = {
@@ -52,13 +51,14 @@ export default class Login extends Component {
     }
 
     handleClick(e) {
-        var self = this;
-        if(this.state.username == 'admin@163.com') {
+        if(this.state.username == 'admin') {
             if(this.state.password == 'admin') {
                 this.setState({msg: 'Loging...'});
                 this.setState({msgClass: 'msg-success'});
-                setTimeout(function() {
-                    self.setState({msg: ''});
+                setTimeout(() => {
+                    sessionStorage.setItem('login','true');
+                    this.setState({msg: ''});
+                    this.props.router.replaceState(null, '/');
                 }, 2000);
             } else {
                 this.setState({msg: 'The username or password error!'});

@@ -5,6 +5,11 @@ import React, { Component } from 'react';
 import Header from './Header';
 
 export default class App extends Component {
+
+    constructor(props, context) {
+        super(props, context);
+    }
+
     render() {
         return (
             <div>
